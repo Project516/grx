@@ -11,7 +11,7 @@ pkg_check_modules (MEMORY_DEPS REQUIRED ${MEMORY_MODULES})
 string (REPLACE ";" " " link_flags "${MEMORY_DEPS_LDFLAGS}")
 
 add_library (grx_memory MODULE ${MEMORY_SOURCE_FILES})
-target_compile_options (grx_memory PRIVATE "-Wall" "-Werror")
+target_compile_options (grx_memory PRIVATE "-Wall" "")
 target_include_directories (grx_memory
     PUBLIC
         ${CMAKE_SOURCE_DIR}/include

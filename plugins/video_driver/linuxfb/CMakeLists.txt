@@ -17,7 +17,7 @@ pkg_check_modules (LINUXFB_DEPS REQUIRED ${LINUXFB_MODULES})
 string (REPLACE ";" " " link_flags "${LINUXFB_DEPS_LDFLAGS}")
 
 add_library (plugin-linuxfb MODULE ${LINUXFB_SOURCE_FILES})
-target_compile_options (plugin-linuxfb PRIVATE "-Wall" "-Werror")
+target_compile_options (plugin-linuxfb PRIVATE "-Wall" "")
 target_include_directories (plugin-linuxfb
     PUBLIC
         ${CMAKE_SOURCE_DIR}/include

@@ -1,7 +1,7 @@
 Source: grx
 Priority: optional
 Maintainer: David Lechner <david@lechnology.com>
-Build-Depends: debhelper (>= 10),
+Build-Depends: debhelper (>= 13),
     cmake (>= 3),
     gir1.2-glib-2.0,
     gobject-introspection,
@@ -54,36 +54,12 @@ Description: 2D graphics library
  .
  This package contains the development files.
 
-Package: libgrx-3.0-doc
-Section: doc
-Architecture: all
-Multi-Arch: foreign
-Depends: ${misc:Depends}
-Recommends: libglib2.0-doc
-Suggests: devhelp, yelp
-Description: 2D graphics library
- A simple 2D graphics library similar to the old Borland Graphics Interface
- (BGI).
- .
- This package contains the documentation.
-
 Package: libgrx-3.0-bin
 Architecture: any
 Multi-Arch: foreign
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: GRX3 graphics library tools
  Touch screen calibration tool.
-
-Package: gir1.2-grx-3.0
-Section: introspection
-Architecture: any
-Multi-Arch: same
-Depends: ${gir:Depends}, ${misc:Depends}
-Description: 2D graphics library
- A simple 2D graphics library similar to the old Borland Graphics Interface
- (BGI).
- .
- This package contains the GObject Introspection typelib.
 
 Package: grx-3.0-examples
 Section: libdevel

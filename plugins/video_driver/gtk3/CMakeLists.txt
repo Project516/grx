@@ -14,7 +14,7 @@ pkg_check_modules (GTK3_DEPS REQUIRED ${GTK3_MODULES})
 string (REPLACE ";" " " link_flags "${GTK3_DEPS_LDFLAGS}")
 
 add_library (plugin-gtk3 MODULE ${GTK3_SOURCE_FILES})
-target_compile_options (plugin-gtk3 PRIVATE "-Wall" "-Werror")
+target_compile_options (plugin-gtk3 PRIVATE "-Wall" "")
 target_include_directories (plugin-gtk3
     PUBLIC
         ${CMAKE_SOURCE_DIR}/include

@@ -13,4 +13,8 @@ override_dh_makeshlibs:
 	dh_makeshlibs --exclude plugin
 
 override_dh_install:
-	dh_install --list-missing
+	dh_install
+	dh_missing --list-missing
+	
+override_dh_auto_configure:
+	dh_auto_configure -- -DENABLE_INTROSPECTION=OFF

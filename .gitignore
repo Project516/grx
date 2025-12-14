@@ -24,3 +24,8 @@ Makefile.in
 Grx_3_0_gir
 *~
 *.orig
+
+#
+obj-arm-linux-gnueabi/*
+obj-debug/*
+*.deb
